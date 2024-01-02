@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Danh sách sản phẩm</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 10;
+    }
+
+    .header {
+      padding: 20px;
+      text-align: left;
+      background: #ffffff;
+      color: black;
+    }
+
+    .header .logo {
+      float: left;
+    }
+
+    .header a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 70px;
+      margin-left: 100px;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: white;
+      float: left;
+      height: 100vh;
+    }
+
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background: #ddd;
+      color: black;
+    }
+
+    .main {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    .main .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .main .stats .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .main .stats .item img {
+      width: 50px;
+      height: 50px;
+    }
+    .main .stats .item p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .main .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .main .table th, .main .table td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    .main .table th {
+      background-color: white;
+      color: black;
+    }
+    .main .table td button {
+      margin: 5px;
+      padding: 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .main .select {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+    .main .select label {
+      margin-right: 10px;
+    }
+    .main .select select {
+      width: 200px;
+    }
+    .dashboard {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 5px;
+    }
+
+    .dashboard-item {
+      width: 30%;
+      padding: 20px;
+      background: #f1f1f1;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .dashboard-item img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .dashboard-item .number {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .dashboard-item .label {
+      font-size: 16px;
+      color: #888;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table th {
+      background: #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" width="80" height="80">
+    </div>
+    <a href="#"> MENU </a>
+  </div>
+  <div class="sidebar">
+    <input type="text" placeholder="Search here...">
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h2> Danh sách sản phẩm </h2>
+    <table class="table">
+      <tr>
+        <th> ID sản phẩm </th>
+        <th> Tên sản phẩm </th>
+        <th> Loại sản phẩm </th>
+        <th> Giá bán </th>
+        <th> Đơn vị tính </th>
+      </tr>
+      <tr>
+        <td> CF01 </td>
+        <td> Cà phê đen </td>
+        <td> Cà phê </td>
+        <td> 29.000đ </td>
+        <td> Cốc </td>
+      </tr>
+      <tr>
+        <td> CF02 </td>
+        <td> Cà phê muối </td>
+        <td> Cà phê </td>
+        <td> 35.000đ </td>
+        <td> Cốc </td>
+      </tr>
+      <tr>
+        <td> CF03 </td>
+        <td> Nâu đá lắc sữa </td>
+        <td> Cà phê </td>
+        <td> 27.000đ </td>
+        <td> Cốc </td>
+      </tr>
+      <tr>
+        <td> TEA01 </td>
+        <td> Trà đào cam sả </td>
+        <td> Trà </td>
+        <td> 39.000đ </td>
+        <td> Cốc </td>
+      </tr>
+      <tr>
+        <td> TEA02 </td>
+        <td> Trà ô long kem mặn </td>
+        <td> Trà </td>
+        <td> 45.000đ </td>
+        <td> Cốc </td>
+      </tr>
+      <tr>
+        <td> CAKE01 </td>
+        <td> Bánh tiramisu </td>
+        <td> Bánh ngọt </td>
+        <td> 30.000đ </td>
+        <td> Cái </td>
+      </tr>
+      <tr>
+        <td> CAKE0 </td>
+        <td> Mousse đào </td>
+        <td> Bánh ngọt </td>
+        <td> 40.000đ </td>
+        <td> Cái </td>
+      </tr>
+    </table>
+    <div class="table-buttons">
+      <button> Thêm </button>
+      <button> Cập nhật </button>
+      <button> Xóa </button>
+    </div>
+  </div>
+</body>
+</html>
